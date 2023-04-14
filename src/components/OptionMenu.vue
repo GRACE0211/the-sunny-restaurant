@@ -1,7 +1,7 @@
 <template>
-    <div id="menu" class="text-center text-5xl font-semibold uppercase tracking-wide text-amber-500 mt-10 md:mt-60 md:text-7xl mx-auto">MENU</div>
+    <div id="menu" class="text-center text-5xl font-semibold uppercase tracking-wide text-amber-500 mt-10 md:mt-40 md:text-7xl mx-auto" data-aos="fade-right" data-aos-once="true">MENU</div>
     <div class="text-center">
-        <select v-model="input.type" class="mt-4 w-1/2 rounded-lg px-4 bg-amber-400 text-amber-900 text-lg font-bold p-2 text-center  shadow-md shadow-amber-900/50">
+        <select v-model="input.type" class="mt-4 w-1/2 rounded-lg px-4 bg-amber-400 text-amber-900 text-lg font-bold p-2 text-center  shadow-md shadow-amber-900/50" data-aos="fade-right" data-aos-once="true">
             <option>All</option>
             <option>Sandwiches</option>
             <option>Hamburgers</option>
@@ -10,9 +10,9 @@
             <option>Drinks</option>
         </select>
     </div>
-    <div class="mx-auto mt-5 rounded-xl  md:w-8/12 w-10/12 p-2 mb-20">
+    <div class="mx-auto mt-5 rounded-xl  md:w-8/12 w-10/12 p-2 mb-40">
         <ul class=" flex flex-wrap gap-5 justify-between mx-auto" >
-            <div v-for="item in typeMenu" :key="item.id" class="mx-auto lg:mx-0 overflow-hidden rounded-xl bg-white shadow-md transition hover:-translate-y-1 hover:scale-110 duration-500 hover:bg-amber-300 ease-in-out hover:text-amber-50  md:max-w-2xl  animate__animated animate__fadeInRight">
+            <div v-for="item in typeMenu" :key="item.id" class="mx-auto lg:mx-0 overflow-hidden rounded-xl bg-white shadow-md transition hover:-translate-y-1 hover:scale-110 duration-500 hover:bg-amber-300 ease-in-out hover:text-amber-50  md:max-w-2xl" data-aos="fade-left" data-aos-once="true">
                 <div class="md:flex md:items-center max-w-md">
                     <div class="md:shrink-0 overflow-hidden">
                         <img class="h-40 w-full object-cover md:h-48 md:w-60 duration-300 transition hover:scale-110 ease-in-out" v-bind:src="item.image" alt="Modern building architecture" />
@@ -31,7 +31,8 @@
 <script>
     import axios from 'axios';
     import 'animate.css/animate.min.css';
-
+    import AOS from 'aos';
+    import 'aos/dist/aos.css';
     export default {
     name: 'OptionMenu',
     data(){
@@ -49,6 +50,9 @@
         this.menu = response.data;
         console.log(response.data);
         console.log(this.menu);
+        });
+        AOS.init({
+            duration: 1000,
         })
     },
     computed:{

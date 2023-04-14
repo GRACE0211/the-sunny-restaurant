@@ -70,16 +70,17 @@
         <img class="h-full w-full object-cover md:h-full md:w-full" src="https://recipes.net/wp-content/uploads/2021/11/best-american-breakfast-foods.jpg" alt="Modern building architecture" />
       </div>
       <div class=" md:h-screen h-full bg-amber-100 p-8">
-        <div class="text-5xl font-semibold uppercase tracking-wide text-amber-500 md:mt-56 md:text-7xl">THE SUNNY RESTAURANT</div>
-        <button class="my-8 rounded-full bg-amber-900 px-5 py-2 text-xl font-bold text-white duration-200 ease-in hover:scale-110 hover:bg-amber-600 shadow-md shadow-amber-900/50">ORDER NOW</button>
-        <p class=" text-yellow-900 md:w-10/12">You can't eat here just once. Sunny restaurant not only provides the best service but also provides food to put you in a good mood. Meat you here! </p>
+        <div class="text-5xl font-semibold uppercase tracking-wide text-amber-500 md:mt-56 md:text-7xl" data-aos="fade-down" data-aos-once="true">THE SUNNY RESTAURANT</div>
+        <button class="my-8 rounded-full bg-amber-900 px-5 py-2 text-xl font-bold text-white duration-200 ease-in hover:scale-110 hover:bg-amber-600 shadow-md shadow-amber-900/50"  data-aos-once="true" data-aos="zoom-in" >ORDER NOW</button>
+        <p class=" text-yellow-900 md:w-10/12" data-aos="fade-up" data-aos-once="true">You can't eat here just once. Sunny restaurant not only provides the best service but also provides food to put you in a good mood. Meat you here! </p>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 export default {
   name: 'LandingPage',
   data() {
@@ -91,6 +92,11 @@ export default {
     navOpen (){
         this.showMenuNav = !this.showMenuNav;
     }
+  },
+  mounted() {
+    AOS.init({
+      duration: 1000,
+    });
   }
 }
 </script>

@@ -9,7 +9,7 @@
       </div>
       <ul class="md:mr-10">
         <li class="py-2 px-1 font-bold text-lg text-amber-100 transition hover:bg-orange-700 md:inline-block"><a href="#menu">MENU</a></li>
-        <li class="py-2 px-1 font-bold text-lg text-amber-100 transition hover:bg-orange-700 md:inline-block"><a href="#">SURVEY FORM</a></li>
+        <li class="py-2 px-1 font-bold text-lg text-amber-100 transition hover:bg-orange-700 md:inline-block"><a href="https://grace0211.github.io/surveyform.github.io/survey%20form/survey%20form.html">SURVEY FORM</a></li>
         <li class="py-2 px-1 font-bold text-lg text-amber-100 transition hover:bg-orange-700 md:inline-block"><a href="#">SHOPPING CART</a></li>
       </ul>
     </div>
